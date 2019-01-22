@@ -24,7 +24,7 @@ r
 hever od I tllay wen nenutm>>> 
 ```
 
-## Evaluation
+## Analysis
 
 The generated data is crude at best. There is no sensible start / finish - each are selected randomly. The chain only knows it's order number of characters back. So quotations and other punctation rarely make sense. Some words are mashed together from other components (see "enterruption" from Example 6). 
 
