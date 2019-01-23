@@ -30,7 +30,7 @@ hever od I tllay wen nenutm>>>
 
 The generated data is crude at best. There is no sensible start / finish - each are selected randomly. The chain only knows it's order number of characters back. So quotations and other punctation rarely make sense. Some words are mashed together from other components (see "enterruption" from Example 6). 
 
-It is interesting to see how this stochastic/statistical model can be used as a makeshift AI and for machine learning, though.
+It is interesting to see how this stochastic/statistical model can be used as a makeshift AI and for rudimentary machine learning, though.
 
 ## Examples
 
