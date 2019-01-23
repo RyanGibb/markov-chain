@@ -6,28 +6,30 @@ dictionary = {}
 
 def train(data, order=1):
     for i in range(len(data) - order):
-        key = "".join(data[i:i+order])
+        key = data[i:i+order]
         if key not in dictionary:
             dictionary[key] = {}
-        next_key = "".join(data[i+order:i+order*2])
+        next_key = data[i+order:i+order*2]
         if next_key not in dictionary[key]:
             dictionary[key][next_key] = 1
         else:
             dictionary[key][next_key] += 1
 
 
-def generate(max_num_events=-1):
+def generate(output, max_num_events=-1):
+    f = open(output, 'wb')
     last_event = random.choice(list(dictionary))
     num_events = 0
     while num_events != max_num_events:
         if last_event not in dictionary:
             last_event = random.choice(list(dictionary))
-            print(last_event, end="")
+            f.write(last_event)
             num_events += 1
         next_events = dictionary[last_event]
         last_event = get_next_event(next_events)
-        print(last_event, end="")
+        f.write(last_event)
         num_events += 1
+    f.close()
 
 
 def get_next_event(next_events):
