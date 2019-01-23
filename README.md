@@ -213,3 +213,29 @@ delicate a little surprised, taking him before his lustre that Lady Cather.
 “Ay, sir,” said, friends or immense
 appear in a complighter direct res
 ```
+
+## Binary Usage
+
+Example with the iteractive interpreter:
+```
+Python 3.7.1 (default, Nov 23 2018, 10:01:49) 
+[GCC 8.2.1 20181105 (Red Hat 8.2.1-5)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from markov_chain import *
+>>> train(open("binary", "rb").read(), 100)
+>>> generate("binary_output", 100000)
+```
+
+This was tried with a raw audio binary file obtained from an mp3.
+
+To get the file, encoded in 16 bit stereo:
+```
+mpg123 *.mp3 > binary
+```
+
+To play raw audio binary files:
+```
+cat binary | aplay -f cd
+```
+
+The results from binary output were underwhelming. The markov chain is too simplistic to be able to generate anything but static without a chain size too large for my computer (with 8Gb RAM and Swap file).
